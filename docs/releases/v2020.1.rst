@@ -8,11 +8,6 @@ term.
 Added Hardware support
 ----------------------
 
-ar71xx-generic
-~~~~~~~~~~~~~~
-
--  TP-Link Archer C60 v2
-
 ath79-generic
 ~~~~~~~~~~~~~
 
