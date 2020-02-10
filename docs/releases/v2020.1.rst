@@ -137,8 +137,8 @@ the node is in a multidomain setup.
 DECT button to enter config mode
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Many AVM devices don’t feature a separate RESET/WPS button, so starting
-this release we support entering the config mode via DECT buttons.
+Many AVM devices don’t feature a separate RESET/WPS button, therefore
+starting this release we support entering the config mode via DECT buttons.
 
 Bugfixes
 --------
