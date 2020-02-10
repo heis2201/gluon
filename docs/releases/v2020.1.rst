@@ -118,7 +118,7 @@ Performance enhancements
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 Gluon now installs zram-swap by default on ``ar71xx`` devices with 8MB
-of flash and 32M of RAM.
+of flash and 32MB of RAM.
 
 Target renaming
 ~~~~~~~~~~~~~~~
@@ -130,9 +130,9 @@ Status Page
 ~~~~~~~~~~~
 
 The status page now includes information about the nexthop prettyname,
-mac address and interface towards the selected gateway when batman-adv
-is used. It also shows the site and additionally the domain name if the
-node is in a multidomain setup.
+MAC address and interface towards the selected gateway when batman-adv
+is used. It also shows the site and additionally displays the domain name if
+the node is in a multidomain setup.
 
 DECT button to enter config mode
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -146,8 +146,8 @@ Bugfixes
 Autoupdater aliases
 ~~~~~~~~~~~~~~~~~~~
 
-We have added several new aliases for continued autoupdater
-compatibility on the following devices:
+We have added several new aliases for autoupdater compatibility on
+the following devices:
 
 - Ubiquiti UniFi AC LR
 - Raspberry Pi
@@ -158,8 +158,8 @@ Site changes
 site.mk
 ~~~~~~~
 
--  The ``GLUON_WLAN_MESH`` variable can be dropped, as 802.11s is now
-   the only supported wireless transport.
+-  The ``GLUON_WLAN_MESH`` variable can be dropped, as 802.11s is
+   the only supported wireless transport from now on.
 
 Internals
 ---------
