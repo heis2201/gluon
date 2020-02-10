@@ -103,22 +103,22 @@ therefore use Linux 4.14.166.
 batman-adv compat v14 removal
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-With 2020.1 we drop support for the long deprecated compat14 version of
-batman-adv. Communities still using this version should migrate to
-batman-adv- using the scheduled domain switch.
+Support for the long deprecated compat 14 version of batman-adv has been
+dropped. Communities still using this version should migrate to batman-adv
+using the scheduled domain switch.
 
 IBSS wireless mesh removal
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Gluon 2020.1 drops support for the IBSS wireless protocol. Communities
+Support for the IBSS wireless protocol has been dropped. Communities
 still using IBSS are suggested to migrate to 802.11s using the scheduled
 domain switch.
 
 Performance enhancements
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-Gluon now installs zram-swap by default on ``ar71xx`` devices with 8MB
-of flash and 32MB of RAM.
+We install zram-swap by default on ``ar71xx`` devices with 8MB of flash
+and 32MB of RAM.
 
 Target renaming
 ~~~~~~~~~~~~~~~
@@ -129,10 +129,11 @@ Target renaming
 Status Page
 ~~~~~~~~~~~
 
-The status page now includes information about the nexthop prettyname,
-MAC address and interface towards the selected gateway when batman-adv
-is used. It also shows the site and additionally displays the domain name if
-the node is in a multidomain setup.
+- Gateway nexthop information has been added to the statuspage when batman-adv
+is used. This includes its MAC address and prettyname as well as the interface
+name towards the selected gateway.
+- The site name has been added to the statuspage. If the node is in a multidomain
+setup it will also show the domain name.
 
 DECT button to enter config mode
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -185,7 +186,7 @@ been updated accordingly.
 Continuous integration
 ~~~~~~~~~~~~~~~~~~~~~~
 
-We now utilize continuous integration testing using Jenkins and thereby
+We have implemented continuous integration testing using Jenkins and thereby
 ensure that all lua and shell scripts are linted, that the documentation
 still builds and warnings are highlighted, and that Gluon still
 compiles, by testing a build on the ``x86_64`` target. We expect this to
