@@ -5,7 +5,7 @@ This is the first release of Gluon in 2020, based on OpenWrt 19.07. It
 introduces the ath79 target, which will replace ar71xx in the short
 term.
 
-Added Hardware support
+Added hardware support
 ----------------------
 
 ath79-generic
@@ -31,7 +31,7 @@ ipq40xx-generic
 ipq806x-generic
 ~~~~~~~~~~~~~~~
 
--  Netgear R7800
+-  Netgcear R7800
 
 lantiq-xway
 ~~~~~~~~~~~
@@ -78,13 +78,16 @@ ramips-mt76x8
 -  TP-Link TL-WA801ND (v5)
 -  TP-Link TL-WR902AC (v3)
 
-Removed Hardware support
+Removed hardware support
 ------------------------
 
--  ALFA Network Hornet-UB
--  ALFA Network Tube2H
--  ALFA Network N2
--  ALFA Network N5
+-  ALFA Network Hornet-UB [#kernelpartition_too_small]_
+-  ALFA Network Tube2H [#kernelpartition_too_small]_
+-  ALFA Network N2 [#kernelpartition_too_small]_
+-  ALFA Network N5 [#kernelpartition_too_small]_
+
+.. [#kernelpartition_too_small]
+  The kernel partition on this device is too small to build a working image.
 
 Major changes
 -------------
@@ -115,7 +118,7 @@ Performance enhancements
 We install zram-swap by default on ``ar71xx`` devices with 8MB of flash
 and 32MB of RAM.
 
-Target renaming
+Renamed targets
 ~~~~~~~~~~~~~~~
 
 - The ``ipq40xx`` target was renamed to ``ipq40xx-generic``.
@@ -133,8 +136,13 @@ Status Page
 DECT button to enter config mode
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Many AVM devices don’t feature a separate RESET/WPS button, therefore
+Many AVM devices don't feature a separate RESET/WPS button, therefore
 starting this release we support entering the config mode via DECT buttons.
+
+X86 partition size
+~~~~~~~~~~~~~~~~~~
+
+The x86 partition size has been reduced to fit on disks with a capacity of 128 MB.
 
 Bugfixes
 --------
@@ -159,12 +167,6 @@ site.mk
 
 Internals
 ---------
-
-x86 partition size
-~~~~~~~~~~~~~~~~~~
-
-The x86 partition size has been reduced to fit on disk with 128 MB
-capacity.
 
 Linting Targets
 ~~~~~~~~~~~~~~~
